@@ -6,4 +6,4 @@ before_install:
   - docker build -t mallesha/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run mallesha/docker-react npm run test -- -- coverage
+  - docker run -e CI=true mallesha/docker-react npm run test -- -- coverage
